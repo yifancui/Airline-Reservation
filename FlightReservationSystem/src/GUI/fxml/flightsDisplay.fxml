@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="511.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.controllers.flightsDisplayController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="423.0" prefWidth="287.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="287.0" text="Select Your Desired Flight" />
+            <TableView id="table1" fx:id="table" />
+            <Label text="Select Sorting Method" />
+            <HBox alignment="CENTER" prefHeight="0.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <RadioButton fx:id="priceRadio" mnemonicParsing="false" onAction="#sortList" text="Price">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="sorting" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="durationRadio" mnemonicParsing="false" onAction="#sortList" text="Duration" toggleGroup="$sorting" />
+                  <RadioButton fx:id="departureRadio" mnemonicParsing="false" onAction="#sortList" text="Departure Time" toggleGroup="$sorting" />
+               </children>
+            </HBox>
+            <HBox prefHeight="0.0" prefWidth="200.0">
+               <children>
+                  <Button id="reserve" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#selectitem" prefHeight="25.0" prefWidth="200.0" text="confirm">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button id="cancel" mnemonicParsing="false" onAction="#cancelitem" prefHeight="25.0" prefWidth="200.0" text="cancel" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
